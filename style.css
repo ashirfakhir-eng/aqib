@@ -1,0 +1,445 @@
+body{
+margin:0;
+font-family:'Noto Nastaliq Urdu', serif;
+background:linear-gradient(135deg,#eef2f3,#dfe9f3);
+user-select:none;
+}
+
+*{user-select:none;}
+
+.header{
+background:linear-gradient(135deg,#1e3c72,#2a5298);
+color:white;
+padding:20px;
+text-align:center;
+font-size:22px;
+font-weight:600;
+}
+
+/* Boxes */
+
+.info-box,.warning-box,.payment-box,.video-note-box{
+padding:20px;
+margin:20px auto;
+max-width:1200px;
+border-radius:12px;
+font-family:'Noto Nastaliq Urdu', serif;
+direction:rtl;
+text-align:right;
+font-size:18px;
+line-height:2;
+box-shadow:0 4px 12px rgba(0,0,0,0.1);
+}
+
+.info-box{background:#e8f5e9;border:2px solid #2e7d32;color:#2e7d32;}
+.warning-box{background:#ffebee;border:2px solid red;color:#b71c1c;}
+.payment-box{background:#fff3e0;border:2px solid #ff6f00;color:#e65100;}
+
+.video-note-box{
+background:#e3f2fd;
+border:2px solid #1565c0;
+color:#0d47a1;
+margin-top:20px;
+}
+
+#loginBox,#denied{
+text-align:center;
+margin:100px auto;
+background:white;
+padding:40px;
+max-width:400px;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,.15);
+}
+
+#lessons{
+display:none;
+max-width:1200px;
+margin:40px auto;
+padding:20px;
+}
+
+/* Video Section */
+
+.course-container{
+display:flex;
+gap:20px;
+}
+
+.video-list{
+width:30%;
+background:white;
+border-radius:15px;
+padding:15px;
+max-height:550px;
+overflow-y:auto;
+}
+
+.video-list ul{
+list-style:none;
+padding:0;
+margin:0;
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(140px,1fr));
+gap:10px;
+}
+
+.video-list li{
+padding:10px;
+border-radius:8px;
+cursor:pointer;
+text-align:right;
+direction:rtl;
+font-family:'Noto Nastaliq Urdu', serif;
+font-size:14px;
+line-height:1.6;
+background:#f9f9f9;
+}
+
+.video-list li:hover{background:#e3f2fd;}
+.video-list li.active{background:#1565c0;color:white;}
+
+.video-player{
+width:70%;
+background:white;
+border-radius:15px;
+padding:20px;
+display:flex;
+flex-direction:column;
+align-items:center;
+}
+
+.video-frame-wrapper{
+position:relative;
+width:100%;
+max-width:100%;
+margin:auto;
+border-radius:12px;
+overflow:hidden;
+background:black;
+}
+
+.video-frame-wrapper iframe{
+width:100%;
+height:50vh;
+display:block;
+margin:auto;
+}
+
+#topBlocker{
+position:absolute;
+top:0;
+left:0;
+right:0;
+height:80px;
+z-index:9999;
+background:transparent;
+touch-action:none;
+}
+
+/* PDF Section */
+
+.pdf-section{
+background:#fff8e1;
+border:2px solid #ff6f00;
+padding:20px;
+margin:30px auto;
+max-width:1200px;
+border-radius:12px;
+font-family:'Noto Nastaliq Urdu', serif;
+direction:rtl;
+text-align:right;
+font-size:17px;
+line-height:1.8;
+box-shadow:0 4px 12px rgba(0,0,0,0.1);
+}
+
+.pdf-section h3{margin-top:0;color:#e65100;}
+.pdf-section ul{list-style:disc;padding-right:20px;}
+.pdf-section ul li{cursor:pointer;margin-bottom:8px;}
+.pdf-section ul li:hover{text-decoration:underline;}
+
+/* PDF Popup */
+
+#pdfModal{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.7);
+z-index:10000;
+justify-content:center;
+align-items:center;
+}
+
+#pdfModalContent{
+position:relative;
+width:80%;
+height:90%;
+background:white;
+border-radius:12px;
+overflow:hidden;
+}
+
+#pdfModalContent iframe{
+width:100%;
+height:100%;
+border:none;
+font-family:'Noto Nastaliq Urdu', serif;
+}
+
+#pdfClose{
+position:absolute;
+top:10px;
+right:20px;
+font-size:28px;
+font-weight:bold;
+cursor:pointer;
+z-index:10001;
+}
+
+/* Mobile */
+
+@media(max-width:900px){
+
+.course-container{
+flex-direction:column-reverse;
+}
+
+.video-list{
+width:100%;
+}
+
+.video-player{
+width:100%;
+padding:10px;
+}
+
+.video-frame-wrapper{
+width:100%;
+margin:auto;
+}
+
+.video-frame-wrapper iframe{
+width:100%;
+height:55vh;
+}
+
+}
+
+/* Video Grid */
+
+.video-grid-section{
+background:#f0f7ff;
+border:2px solid #1976d2;
+padding:25px;
+margin:40px auto;
+max-width:1200px;
+border-radius:12px;
+box-shadow:0 4px 15px rgba(0,0,0,0.08);
+direction:rtl;
+text-align:right;
+font-family:'Noto Nastaliq Urdu', serif;
+}
+
+.video-grid-section h3{
+color:#0d47a1;
+margin-top:0;
+text-align:center;
+margin-bottom:25px;
+}
+
+.video-grid{
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+gap:20px;
+}
+
+.video-item{
+background:white;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 3px 10px rgba(0,0,0,0.1);
+cursor:pointer;
+transition:transform .2s,box-shadow .2s;
+text-align:center;
+}
+
+.video-item:hover{
+transform:translateY(-5px);
+box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
+
+.video-thumb{
+position:relative;
+width:100%;
+padding-top:56.25%;
+background:#000;
+}
+
+.video-thumb img{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.video-thumb .play-icon{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+font-size:60px;
+color:#ff0000;
+opacity:.85;
+pointer-events:none;
+}
+
+.video-title{
+padding:12px 10px;
+font-size:16px;
+line-height:1.5;
+color:#333;
+}
+
+/* Video Modal */
+
+#videoModal{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.85);
+z-index:10000;
+justify-content:center;
+align-items:center;
+}
+
+#videoModalContent{
+position:relative;
+width:90%;
+max-width:960px;
+background:#000;
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 0 30px rgba(0,0,0,0.6);
+}
+
+#videoModalContent iframe{
+width:100%;
+height:56.25vw;
+max-height:75vh;
+border:none;
+}
+
+#videoClose{
+position:absolute;
+top:15px;
+right:20px;
+font-size:40px;
+color:white;
+cursor:pointer;
+z-index:10001;
+background:rgba(0,0,0,0.5);
+width:50px;
+height:50px;
+border-radius:50%;
+text-align:center;
+line-height:50px;
+}
+
+.video-overlay{
+position:absolute;
+top:0;
+left:0;
+right:0;
+bottom:0;
+background:transparent;
+z-index:10;
+}
+
+/* Mobile */
+
+@media(max-width:600px){
+
+.video-grid{
+grid-template-columns:1fr;
+}
+
+#videoModalContent{
+width:96%;
+}
+
+}
+
+/* Banner Popup */
+
+#bannerPopup{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.8);
+z-index:20000;
+justify-content:center;
+align-items:center;
+}
+
+.bannerPopupBox{
+background:white;
+width:90%;
+max-width:500px;
+border-radius:15px;
+padding:20px;
+text-align:center;
+position:relative;
+}
+
+.bannerTitle{
+font-size:22px;
+margin-bottom:15px;
+direction:rtl;
+}
+
+.bannerVideo{
+position:relative;
+cursor:pointer;
+}
+
+.bannerVideo img{
+width:100%;
+border-radius:10px;
+}
+
+.bannerPlay{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+font-size:70px;
+color:red;
+}
+
+#bannerFrame{
+display:none;
+width:100%;
+height:300px;
+border:none;
+border-radius:10px;
+}
+
+.bannerClose{
+position:absolute;
+top:10px;
+left:15px;
+font-size:30px;
+cursor:pointer;
+}
