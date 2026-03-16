@@ -1,5 +1,5 @@
 const ADMIN_EMAIL="ashirfakhir@gmail.com";
-const SCRIPT_URL="https://script.google.com/macros/s/AKfycby1z9Xlm7WG0Z9zPauiFIvgA8rKJ38IBq--tI6dOQFUP144qFc4obenevHVyYCecg6wwg/exec";
+const SCRIPT_URL="https://script.google.com/macros/s/AKfycbxZypkqPjUTqpSQaswA_eH68uqbv9tIk5HxQigMDqSmIqhoxO-gj1LMDpxUo0cGIh0hgg/exec";
 const SESSION_KEY="courseUser";
 const SESSION_TIME_KEY="lastActivity";
 const MAX_INACTIVE_TIME=60*60*1000;
