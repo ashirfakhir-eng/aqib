@@ -179,6 +179,9 @@ function loadVideoGrid(){
 const videos=[
 
 {id:"MWV9Nrq0V-M",title:"زوم کے ذریعے پڑھانے کا طریقہ"},
+  {id:"9OCiSD5_CSs",title:"نیا پے (NayaPay)اکاؤنٹ بنانے کا طریقہ"},
+    {id:"dDCxgR2Gob8",title:"نیا پے (NayaPay) اکاؤنٹ کی فائنل سیٹنگ"},
+    {id:"0ub4VFoLPRk",title:"نیا پے ماسٹرکارڈ"},
 {id:"fTrFXPc9ymw",title:"پاکستان اور بیرون ممالک اشتہار چلانے میں فرق"},
 {id:"nu4UKVILSe8",title:"انگلش میں اشتہارات بنانے کا طریقہ"},
 {id:"EQptzURWSiY",title:"ٹیم پر اکاؤنٹ بنانے کا طریقہ"},
